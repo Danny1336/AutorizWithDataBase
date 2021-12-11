@@ -1,0 +1,36 @@
+﻿<Page x:Class="CursV2.View.WorkerEdit"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CursV2.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="WorkerEdit">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Foreground="White" VerticalAlignment="Center" Margin="5" FontSize="14" Text="Аватар" Grid.Row="4"></TextBlock>
+        <TextBox Text="{Binding Avatar}" Margin="5" MaxLength="150" Grid.Column="1" Grid.Row="4" Height="30"></TextBox>
+        <TextBlock  Foreground="White" VerticalAlignment="Center" Margin="5" FontSize="14" Text="ФИО"></TextBlock>
+        <TextBlock  Foreground="White" VerticalAlignment="Center" Margin="5" FontSize="14" Text="Логин" Grid.Row="1"></TextBlock>
+        <TextBlock  Foreground="White" VerticalAlignment="Center" Margin="5" FontSize="14" Text="Пароль" Grid.Row="2"></TextBlock>
+        <TextBlock  Foreground="White" VerticalAlignment="Center" Margin="5" FontSize="14" Text="Роль" Grid.Row="3"></TextBlock>
+        <TextBox Text="{Binding login}" Margin="5" MaxLength="150" Grid.Column="1" Grid.Row="1" Height="30"></TextBox>
+        <TextBox Text="{Binding FIO}" Margin="5" MaxLength="150" Grid.Column="1" Height="30"></TextBox>
+        <TextBox Text="{Binding pass}" Margin="5" Grid.Row="2" Grid.Column="1" Height="30"></TextBox>
+        <ComboBox SelectedItem="{Binding Name}" Margin="5" Grid.Row="3" Grid.Column="1" Height="30" x:Name="ComboRols" DisplayMemberPath="Name"></ComboBox>
+        <Button Content="Сохранить" Grid.ColumnSpan="2" Grid.Row="5" Width="150" Height="40" Name="BtnSave" Click="BtnSave_Click"></Button>
+    </Grid>
+</Page>
